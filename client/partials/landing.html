@@ -1,12 +1,22 @@
 <div id='body_container' ng-controller='mainController'>
 	<nav>
-		<div>
-			<button class='nav_options'>Welcome</button>
-			<button class='nav_options'>Skills</button>
-			<button class='nav_options'>Interview</button>
-			<button class='nav_options'>Components</button>
-			<button class='nav_options'>Influences</button>
-			<button class='nav_options'>Contact</button>
+		<div id='collasped_nav'>
+			<button ng-click="scrollTo('landing')" >Welcome</button>
+			<button ng-click="scrollTo('skills')" >Skills</button>
+			<button ng-click="scrollTo('interview')" >Interview</button>
+			<button ng-click="scrollTo('influences')" >Influences</button>
+			<button ng-click="scrollTo('projects')" >Projects</button>
+			<button ng-click="scrollTo('contact')" >Contact</button>
+		</div>
+		<div id='expanded_nav'>
+			<div id='me'>
+			</div>
+			<button ng-click="scrollTo('landing')" >Welcome</button>
+			<button ng-click="scrollTo('skills')" >Skills</button>
+			<button ng-click="scrollTo('interview')" >Interview</button>
+			<button ng-click="scrollTo('influences')" >Influences</button>
+			<button ng-click="scrollTo('projects')" >Projects</button>
+			<button ng-click="scrollTo('contact')" >Contact</button>
 		</div>
 	</nav>
 	<aside>
@@ -14,35 +24,238 @@
 				<h1>Brandon Scott</h1>
 				<h3>...Loves to learn new things and create awesome user experiences!</h3>
 		</section>
+		<div id="myModalLIST" class="modal">
+		  <div class="modal-content">
+		    <span class="closeLIST">x</span>
+				<div id='all_tech'>
+					<h3>Development</h3>
+					<ul>
+						<li>PHP</li>
+						<li>JavaScript</li>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>Node.js</li>
+						<li>Express.js</li>
+						<li>Angular.js</li>
+						<li>Mongoose.js</li>
+						<li>NoSQL</li>
+						<li>MySQL</li>
+						<li>CodeIgniter</li>
+						<li>React.js</li>
+						<li>JQuery</li>
+						<li>Underscore.js</li>
+						<li>Socket.io</li>
+						<li>Moment.js</li>
+						<li>Bcrypt</li>
+						<li>Queues</li>
+						<li>Linked Lists</li>
+						<li>Binary Search Trees</li>
+						<li>OOP</li>
+						<li>EJS</li>
+						<li>Client-Session</li>
+						<li>JSX</li>
+						<li>Webpack</li>
+						<li>Babel</li>
+						<li>Axios</li>
+						<li>Stripe API</li>
+						<li>AJax</li>
+						<li>NPM</li>
+						<li>AWS</li>
+						<li>Git</li>
+						<li>Responsive Design</li>
+						<li>Computer Networking</li>
+						<li>A+ hardware installation</li>
+					</ul>
+					<h3>Design</h3>
+					<ul>
+						<li>CSS3</li>
+						<li>Bootstrap3</li>
+						<li>Illustrator</li>
+						<li>Photoshop</li>
+						<li>InDesign</li>
+						<li>Wireframes</li>
+						<li>User Stories</li>
+						<li>UX/UI</li>
+						<li>CSS Animations</li>
+						<li>Color Theory</li>
+						<li>Typography</li>
+					</ul>
+					<h3>Communication</h3>
+					<ul>
+						<li>Customer Service</li>
+						<li>Management</li>
+						<li>LinkedIn</li>
+					</ul>
+					<h3>Interests</h3>
+					<ul>
+						<li>Technology</li>
+						<li>Development</li>
+						<li>Design</li>
+						<li>Efficiency</li>
+						<li>Problem Solving</li>
+						<li>Social Science</li>
+						<li>Polyphasic Sleep</li>
+						<li>Time Management</li>
+						<li>Cooking</li>
+						<li>Quantum Physics</li>
+						<li>Cosmology</li>
+						<li>Psychology</li>
+						<li>Philosophy</li>
+						<li>Geology</li>
+						<li>Chemistry</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<!-- The Modal -->
 		<div id="myModalLAMP" class="modal">
 		  <div class="modal-content">
 		    <span class="closeLAMP">x</span>
-		    <p>Some text in the Modal..</p>
-		  </div>
+				<div class='info_box'>
+					<div class='image'>
+						<img src='./css/images/lamplogo.svg'>
+					</div>
+					<div class='summary'>
+						<div class='description'>
+							<h3>What is LAMP?</h3>
+							<p>LAMP, commonly referred to as the LAMP Stack, is a widely used open source web platform. The acronym LAMP stands for Linux Apache MySQL and PHP/Python/Perl. It is estimated that the LAMP stack accounts for upwards of 80% of the sites connected to the web. LAMP is my secondary development stack</p>
+						</div>
+					</div>
+					<div class='tech'>
+						<div class='list_tech'>
+							<h3>Technologies</h3>
+							<ul>
+								<li>PHP</li>
+								<li>MySQL</li>
+								<li>CodeIgniter</li>
+								<li>HTML5</li>
+								<li>CSS3</li>
+								<li>JavaScript</li>
+								<li>Ajax</li>
+							</ul>
+						</div>
+					</div>
+		  	</div>
+			</div>
 		</div>
 		<div id="myModalMEAN" class="modal">
 			<div class="modal-content">
-				<span class="closeMEAN">x</span>
-				<p>Some text in the Modal..</p>
+		    <span class="closeMEAN">x</span>
+				<div class='info_box'>
+					<div class='image'>
+						<img src='./css/images/meanlogo.svg'>
+					</div>
+					<div class='summary'>
+						<div class='description'>
+							<h3>What is MEAN?</h3>
+							<p>MEAN is a relatively new open source software stack built in JavaScript. MEAN is the acronym used to describe the technologies; MongoDB, Express.js, Angular.js and Node.js. Together these technologies become a powerful web application software bundle. I use MEAN as my primary development stack.</p>
+						</div>
+					</div>
+					<div class='tech'>
+						<div class='list_tech'>
+							<h3>Technologies</h3>
+							<ul>
+								<li>JavaScript</li>
+								<li>Node</li>
+								<li>Express</li>
+								<li>MongoDB</li>
+								<li>Angular</li>
+								<li>Mongoose</li>
+								<li>Web Sockets</li>
+							</ul>
+						</div>
+					</div>
+		  	</div>
 			</div>
 		</div>
 		<div id="myModalUX" class="modal">
 			<div class="modal-content">
 				<span class="closeUX">x</span>
-				<p>Some text in the Modal..</p>
+				<div class='info_box'>
+					<div class='image'>
+						<img src='./css/images/UX.svg'>
+					</div>
+					<div class='summary'>
+						<div class='description'>
+							<h3>What is UX?</h3>
+							<p>UX, or UX/UI is short for User Experience and User Interface. This skill is about making the experience engaging, valuable and easy for your users. A good user experience is extremely important.</p>
+						</div>
+					</div>
+					<div class='tech'>
+						<div class='list_tech'>
+							<h3>Concepts</h3>
+							<ul>
+								<li>User Stories</li>
+								<li>Fitt's Law</li>
+								<li>CSS Animations</li>
+								<li>Parallax</li>
+								<li>Contrast</li>
+								<li>Proximity</li>
+								<li>Feedback</li>
+							</ul>
+						</div>
+					</div>
+		  	</div>
 			</div>
 		</div>
 		<div id="myModalOOP" class="modal">
 			<div class="modal-content">
 				<span class="closeOOP">x</span>
-				<p>Some text in the Modal..</p>
+				<div class='info_box'>
+					<div class='image'>
+						<img src='./css/images/oop.svg'>
+					</div>
+					<div class='summary'>
+						<div class='description'>
+							<h3>What is OOP?</h3>
+							<p>OOP is short for Object Oriented Programming. This is a way of modeling your code to have properties and behaviors similar to real world objects. Using OOP can make code more modular and secure.</p>
+						</div>
+					</div>
+					<div class='tech'>
+						<div class='list_tech'>
+							<h3>Technologies</h3>
+							<ul>
+								<li>Unified Modeling Language</li>
+								<li>Design Patterns</li>
+								<li>Inheritance</li>
+								<li>Interfaces</li>
+								<li>Encapsulation</li>
+								<li>Polymorphism</li>
+								<li>Abstraction</li>
+							</ul>
+						</div>
+					</div>
+		  	</div>
 			</div>
 		</div>
 		<div id="myModalCMS" class="modal">
 			<div class="modal-content">
 				<span class="closeCMS">x</span>
-				<p>Some text in the Modal..</p>
+				<div class='info_box'>
+					<div class='image'>
+						<img src='./css/images/cms.svg'>
+					</div>
+					<div class='summary'>
+						<div class='description'>
+							<h3>What is a CMS?</h3>
+							<p>CMS is an acronym for Content Management System. This is a system that allows for collaboration, security and redundacy with code. Using a CMS is vital on large projects. It ensures accountability and can allow for several things to be worked on at the same time.</p>
+						</div>
+					</div>
+					<div class='tech'>
+						<div class='list_tech'>
+							<h3>Tech and Concepts</h3>
+							<ul>
+								<li>Drupal</li>
+								<li>Git</li>
+								<li>Branches</li>
+								<li>Merging</li>
+								<li>Commits</li>
+								<li>Pushes</li>
+								<li>Pulls</li>
+							</ul>
+						</div>
+					</div>
+		  	</div>
 			</div>
 		</div>
 		<section id='skills'>
@@ -80,66 +293,316 @@
 						<div class='bar'>
 						</div>
 					</div>
-					<div id='OOP' class='row'>
-						<div id='oop_name' class='col-xs-2'>
-							<div id='myBtnOOP' class='circle'>
-								OOP
-							</div>
-						</div>
-						<div id='oop_bar' class='col-xs-10'>
-							<div class='bar'>
-							</div>
-						</div>
-						<div id='CMS' class='row'>
-							<div id='cms_name' class='col-xs-2'>
-								<div id='myBtnCMS' class='circle'>
-									CMS
-								</div>
-							</div>
-							<div id='cms_bar' class='col-xs-10'>
-								<div class='bar'>
-								</div>
-							</div>
 				</div>
+				<div id='OOP' class='row'>
+					<div id='oop_name' class='col-xs-2'>
+						<div id='myBtnOOP' class='circle'>
+							OOP
+						</div>
+					</div>
+					<div id='oop_bar' class='col-xs-10'>
+						<div class='bar'>
+						</div>
+					</div>
+				</div>
+				<div id='CMS' class='row'>
+					<div id='cms_name' class='col-xs-2'>
+						<div id='myBtnCMS' class='circle'>
+							CMS
+						</div>
+					</div>
+					<div id='cms_bar' class='col-xs-10'>
+						<div class='bar'>
+						</div>
+					</div>
+				</div>
+				<a href='' id='myBtnLIST'>List of all Skills</a>
 		</section>
 		<section id='interview'>
-			<h2>Have questions? I've got answers!</h2>
+			<h1>INTERVIEW</h1>
 			<div class='row'>
+					<h2>Have questions? I've got answers!</h2>
 				<div id='interview_visuals' class='col-xs-8'>
 					<div id='interview_question'>
-						<div>
+						<div id='question'>
 							I'd like to go through a quick interview with you.
 						</div>
 					</div>
 					<div id='interview_answer'>
-						<div>
+						<div id='answer'>
 						   Feel free to ask me a question.
 						</div>
 					</div>
 				</div>
 				<div id='interview_questions' class='col-xs-4'>
 					<h3>Select a question and click the ask button to get an answer</h3>
-					<select>
-						<option>Tell me a little bit about yourself</option>
-						<option>What would you say your strengths are?</option>
-						<option>What are your weaknesses?</option>
-						<option>In your free time, what do you find yourself doing?</option>
-						<option>Do you work well in a team?</option>
-						<option>Where do you see yourself in 5 years?</option>
-						<option>Coke or Pepsi?</option>
-						<option>What sets your apart from your competition?</option>
+					<select ng-model='qa'>
+						<option ng-repeat='q in questions'>{{q.question}}</option>
 					</select>
-					<button>Ask me!</button>
+					<button ng-click='ask(qa)'>Ask me!</button>
 				</div>
 			</div>
 		</section>
-		<section id='components'>
-		</section>
 		<section id='influences'>
+			<h1>INFLUENCES</h1>
+			<div id='infulence_quote' class='row'>
+				<h2>...I get inspired by learning from dedicated content creators on YouTube. Check these channels out if you want to learn more...</h2>
+			</div>
+			<div id='channels' class='row'>
+				<div class='row channel'>
+					<div class='col-xs-12 col-sm-6 video'>
+						<div class="youtube-player" id="f1WMjDx4snI"></div>
+					</div>
+					<div class='col-xs-12 col-sm-6 channel_details'>
+						<h3><a href='https://www.youtube.com/user/DevTipsForDesigners' target="_blank">Dev Tips</a></h3>
+						<hr>
+						<h4> Travis, the creator of DevTips is a web designer for Google who spends his time giving insights into front end development.</h4>
+						<h4> I get inspired to make my user experiences more and more immersive everytime I watch one of the DevTips videos. Recently, I watched the course on parallax and cannot wait to try it out!</h4>
+					</div>
+				</div>
+				<hr>
+				<div class='row channel'>
+					<div class='col-xs-12 col-sm-6 channel_details'>
+						<h3><a href='https://www.youtube.com/user/TheSkoolRocks' target="_blank">The Skool</a></h3>
+						<hr>
+						<h4> Chris Do and Jose Caballer are designers who teach about design, and the business of design.</h4>
+						<h4> I love to learn about how to communicate with clients, design user experiences and just get an insight into what is considered good design. They have great case studies showing the entire process from exploration to implementation.</h4>
+					</div>
+					<div class='col-xs-12 col-sm-6 video'>
+							<div class="youtube-player" id="vSx2wayTk0g"></div>
+					</div>
+				</div>
+				<hr>
+				<div class='row channel'>
+					<div class='col-xs-12 col-sm-6 video'>
+						<div class="youtube-player" id="ciNHn38EyRc"></div>
+					</div>
+						<div class='col-xs-12 col-sm-6 channel_details'>
+							<h3><a href='https://www.youtube.com/user/Computerphile' target="_blank">Computerphile</a></h3>
+							<hr>
+							<h4> Computerphile is a channel dedicated to computer science. It covers a huge range of topics from security to artificial intellegence.</h4>
+							<h4> Learning about how attacks on a site can happen can help me ensure to avoid common pitfalls in security design. I get very excited when one of the high level concepts clicks for me and opens up a whole new array of topic for me to research.</h4>
+					</div>
+				</div>
+				<div class='row more_video'>
+					<h4>... Here are some more channels I watch regularly... </h4>
+					<div class='channel_box'>
+						<div class='thumbnail_video'>
+							<h5>In a nutshell</h5>
+							<div class='mini_youtube'>
+								<div class="youtube-player_sm" id="JhHMJCUmq28"></div>
+							</div>
+						</div>
+						<div class='thumbnail_video'>
+							<h5>Sixty Symbols</h5>
+							<div class='mini_youtube'>
+								<div class="youtube-player_sm" id="qI5q6OqSo4s"></div>
+							</div>
+						</div>
+						<div class='thumbnail_video'>
+							<h5>Scishow</h5>
+							<div class='mini_youtube'>
+								<div class="youtube-player_sm" id="JOL-nUt_vfo"></div>
+							</div>
+						</div>
+						<div class='thumbnail_video'>
+							<h5>Vsauce</h5>
+							<div class='mini_youtube'>
+								<div class="youtube-player_sm" id="FJB7gbjiJKw"></div>
+							</div>
+						</div>
+						<div class='thumbnail_video'>
+							<h5>PBS Spacetime</h5>
+							<div class='mini_youtube'>
+								<div class="youtube-player_sm" id="8ORLN_KwAgs"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id='projects'>
+			<h1>PROJECTS</h1>
+			<div id='portfolio1'>
+				<div class='row extra_padding'>
+					<div id='portfolio1_topleft' class='col-xs-7'>
+						<h2>Portfolio First Iteration</h2>
+						<h4>August 2016 | 3 weeks | No contributors</h4>
+						<div class='project_description'>
+							This was my first attempt at a portfolio. I just learned about css animations, and how design plays an important role in building a site. I followed a much longer workflow when working on this project and learned a lot about user experiences.
+						</div>
+					</div>
+					<div id='portfolio1_topright' class='col-xs-5'>
+						<h4>Concepts and Tech</h4>
+						<ul>
+							<li>Angular.js</li>
+							<li>Modular Code</li>
+							<li>CSS Animations</li>
+							<li>Page Transitions</li>
+							<li>Page Design</li>
+							<li>Auto Scrolling</li>
+							<li>CSS filters and Boxshadows</li>
+							<li>Content Mitigation</li>
+							<li>UX/UI</li>
+						</ul>
+					</div>
+				</div>
+				<div class='row'>
+						<img src='./css/images/portfolioO.png'>
+				</div>
+				<a href='https://github.com/scott01091992/portfolio' target="_blank">Github Source Code</a>
+			</div>
+			<div id='meridians'>
+				<div class='row extra_padding'>
+					<div id='meridians_topleft' class='col-xs-5'>
+						<h4>Concepts and Tech</h4>
+						<ul>
+							<li>React Components</li>
+							<li>Component Lifecycles</li>
+							<li>Component Communication</li>
+							<li>Drag and Drop in HTML5</li>
+							<li>Overlays and Modals</li>
+							<li>React States and Props</li>
+							<li>JSX and Webpack</li>
+							<li>Calendar Building</li>
+							<li>Moment.js</li>
+						</ul>
+					</div>
+					<div id='meridians_topright' class='col-xs-7'>
+						<h2>Meridians</h2>
+						<h4>July 2016 | 2 weeks | No contributors</h4>
+						<div class='project_description'>
+							Meridians is drag and drop calendar built with the React.js framework. This was my first time using React, so there were plenty of things to learn. Getting a lot of much needed experience with time manipulation was my favorite part about this project.
+						</div>
+					</div>
+				</div>
+				<div class='row'>
+					<img src='./css/images/meridiansO.png'>
+				</div>
+				<a href='https://github.com/scott01091992/react_calendar' target="_blank">Github Source Code</a>
+			</div>
+			<div id='gamergroups'>
+				<div class='row extra_padding'>
+					<div id='gamergroups_topleft' class='col-xs-7'>
+						<h2>Gamer Groups</h2>
+						<h4>June 2016 | 3 weeks | No contributors</h4>
+						<div class='project_description'>
+							Gamer Groups was my first attempt at a site. I dove into it with the idea of building an easy way to find a friend to play a game with. While building the site I got to learn all about web sockets and how to use them to make real time updates for users. I also wanted to experiment with responsive design, so I learned all about media query usage and page breakpoints.
+						</div>
+					</div>
+					<div id='gamergroups_topright' class='col-xs-5'>
+						<h4>Concepts and Tech</h4>
+						<ul>
+							<li>Angular.js</li>
+							<li>Socket.io</li>
+							<li>Emits and Broadcasts</li>
+							<li>SocketIds and RoomIds</li>
+							<li>Client Session</li>
+							<li>Log in checks</li>
+							<li>Responsive Design</li>
+						</ul>
+					</div>
+				</div>
+				<div class='row'>
+					<img src='./css/images/gamergroupsO.png'>
+				</div>
+				<a href='https://github.com/scott01091992/lookingforgroup_remasterd' target="_blank">Github Source Code</a>
+			</div>
+			<div id='codeexchange'>
+				<div class='row extra_padding'>
+					<div id='codeexchange_topleft' class='col-xs-5'>
+						<h4>Concepts and Tech</h4>
+						<ul>
+							<li>Angular.js</li>
+							<li>Express.js</li>
+							<li>Node.js</li>
+							<li>Mongoose.js</li>
+							<li>Login & registration</li>
+							<li>Form validation</li>
+							<li>MongoDB Schemas</li>
+							<li>Deep Populations</li>
+							<li>Bcrypt Encryption</li>
+						</ul>
+					</div>
+					<div id='codeexchange_topright' class='col-xs-7'>
+						<h2>Code Exchange</h2>
+						<h4>May 2016 | 1 week | No contributors</h4>
+						<div class='project_description'>
+							Code Exchange was my last assignment in the Coding Dojo for the MEAN Stack. I had already learned the basics of MEAN and this was a test to put them all together and see what I could build in a week. I really got to explore more of the backend development with this project. Deep population and returning validation errors was an important lesson to learn.
+						</div>
+					</div>
+				</div>
+				<div class='row'>
+					<img src='./css/images/codeexchangeO.png'>
+				</div>
+				<a href='https://github.com/scott01091992/discussionBoard' target="_blank">Github Source Code</a>
+			</div>
+			<div id='paypyr'>
+				<div class='row extra_padding'>
+					<div id='paypyr_topleft' class='col-xs-7'>
+						<h2>Paypyr</h2>
+						<h4>April 2016 | 1 week | No contributors</h4>
+						<div class='project_description'>
+							Paypyr is my last assignment given to me in the LAMP stack course at the Coding Dojo. I got to combine my knowledge of basic html, css and php to build a full application. The goal was to build a site that would allow users to log in, see reviews, rate reviews or post reviews on book. This was a very exciting assignment that really pushed my knowledge of SQL queries forward.
+						</div>
+					</div>
+					<div id='paypyr_topright' class='col-xs-5'>
+						<h4>Concepts and Tech</h4>
+						<ul>
+							<li>PHP</li>
+							<li>MySQL</li>
+							<li>CodeIgniter</li>
+							<li>MVC Frameworks</li>
+							<li>Login & registration</li>
+							<li>Form validation</li>
+							<li>SQL Queries</li>
+							<li>Bootstrap3</li>
+						</ul>
+					</div>
+				</div>
+				<div class='row'>
+					<img src='./css/images/paypyrO.png'>
+				</div>
+				<a href='https://github.com/scott01091992/book_reviews' target="_blank">Github Source Code</a>
+			</div>
 		</section>
 		<section id='contact'>
+			<h1>CONTACT</h1>
+			<div class='parallax_image'>
+				<h3 id='have_a_problem'>...If you have a problem that needs a solution...</h3>
+				<div id='contactme'>
+				</div>
+				<h3 id='let_me_know'>...Just let me know...</h3>
+			</div>
+			<div id='contact_info'>
+				<div class='row'>
+					<div class='col-xs-4'>
+						<img src='./../css/images/github.svg'><a href='https://github.com/scott01091992' target="_blank"><h3>Github</h3></a>
+					</div>
+					<div class='col-xs-4'>
+						<img src='./../css/images/linkedin.svg'><a href='https://www.linkedin.com/in/brandon-scott-734844106
+' target="_blank"><h3>LinkedIn</h3></a>
+					</div>
+					<div class='col-xs-4'>
+						<img src='./../css/images/resume.png'><a href='./../css/Resume.docx' download><h3>Resume</h3></a>
+					</div>
+				</div>
+			</div>
+			<div id='contact_form_container'>
+				<form>
+					<label><span class='success'>{{success_message}}</span></label>
+					<label>Name: <span class='error'>{{name_error}}</span></label>
+					<input ng-model='name' type='text'>
+					<label>Email: <span class='error'>{{email_error}}</span></label>
+					<input ng-model='email' type='text'>
+					<label>Message: <span class='error'>{{message_error}}</span></label>
+					<textarea ng-model='message' rows='8'></textarea>
+					<button ng-click='send_message()'>Contact</button>
+				</form>
+			</div>
+			<div id='back_button_container'>
+				<button ng-click='back_top()' id='back'>Back to Top</button>
+			</div>
 		</section>
-		<div id='modal_form'>
-		</div>
 	</aside>
 </div>

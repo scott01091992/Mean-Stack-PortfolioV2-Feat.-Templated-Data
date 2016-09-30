@@ -1,9 +1,9 @@
 myApp.config(function ($routeProvider){
   $routeProvider
-    .when('/landing',{
+    .when('/',{
       templateUrl: '../partials/landing.html'
     })
     .otherwise({
-      redirectTo: '/landing'
+      redirectTo: '/'
     })
 });

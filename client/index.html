@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 	<head>
-		<title>Discussion Board</title>
+		<meta name="description" content="Brandon Scott, Designer and Developer's portfolio site. ">
+		<meta name="author" content="Brandon Scott">
+		<meta name="keywords" content="brandon scott, web developer, web designer, portfolio, designer" />
+		<meta charset="UTF-8">
+		<meta name="robots" content="index, nofollow" />
+		<title>Brandon Scott Portfolio</title>
 		<!-- Bring in css -->
+		<link rel="icon" type="image/x-icon" href="/favicon-32x32.png" />
 		<link rel='stylesheet' href='./css/bootstrap.min.css'>
 		<link rel='stylesheet' href='./css/main.css'>
 	</head>
@@ -12,14 +18,14 @@
 		<script>
 			var myApp = angular.module('myApp', ['ngRoute']);
 		</script>
+		<body ng-app='myApp'>
+			<div ng-view=''>
+			</div>
+		</body>
 		<!-- Routes -->
 		<script type="text/javascript" src='./js/routes.js'></script>
 		<!-- Factories -->
 		<script type="text/javascript" src='./js/factories/mainFactory.js'></script>
 		<!-- Controllers -->
 		<script type="text/javascript" src='./js/controllers/mainController.js'></script>
-	<body ng-app='myApp'>
-		<div ng-view=''>
-		</div>
-	</body>
 </html>
