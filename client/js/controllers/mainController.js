@@ -134,12 +134,12 @@ myApp.controller('mainController', function($scope, mainFactory){
 	}
 
 	$scope.back_top = function(){
-		scrollTo(document.body, 0, 5000 );
+		scrollTo(document.body, 0, 7000 );
 	}
 
 	$scope.scrollTo = function(id){
 		if(id == 'landing'){
-			scrollTo(document.body, 0, 500 );
+			scrollTo(document.body, 0, 1000 );
 		}
 		else{
 			timer = document.getElementById(id).offsetTop/2;
