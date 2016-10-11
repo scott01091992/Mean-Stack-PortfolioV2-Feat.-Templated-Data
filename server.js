@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 
 var nodemailer = require('nodemailer');
-transporter = nodemailer.createTransport('smtps://scott.01091992%40gmail.com:01091992Abc!@smtp.gmail.com');
+transporter = nodemailer.createTransport('smtps://************%40yahoo.com:**********@smtp.mail.yahoo.com');
 
 var app = express();
 

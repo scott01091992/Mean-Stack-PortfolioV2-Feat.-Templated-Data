@@ -12,7 +12,7 @@ module.exports = (function(){
 				}
 				else{
 					var mailOptions = {
-					  from: "'brandon s' <scott.01091992@gmail.com",
+					  from: "'brandon s' <theoutcast92@yahoo.com",
 					  to: "'brandon s' <scott.01091992@gmail.com",
 					  subject: 'Message Alert From Portfolio',
 					  text: 'You have a new message',
